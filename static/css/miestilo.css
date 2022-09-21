@@ -1,0 +1,27 @@
+.contenido1{
+    position: relative;
+    top: 60px
+}
+
+#con{
+    background-color: rgb(19, 8, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.formDataEstudiantes{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px; /*reemplaza margin-bottom sirve para separar los imput u otros ítems */
+    background-color: aliceblue;
+    border-radius: 5px; /*sirve para redondear */
+    padding: 20px;    
+}
+
+/* .formDataEstudiantes input{
+    margin-bottom: 5px;
+    margin-top: 5px;
+} */
