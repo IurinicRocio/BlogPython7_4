@@ -56,7 +56,7 @@ ROOT_URLCONF = 'BlogPython7_4.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'BlogPython7_4/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
