@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <p>Crear Autor</p>
+    <div> 
+        <form action="/Autores/create_autor/" method="POST" enctype="multipart/form-data"> 
+            {% csrf_token %}
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="file" name="fotoPerfil" placeholder="Seleccione una foto de perfil">
+            <input type="text" name="sobreMi" placeholder="Sobre mi">
+            <button type="submit" class="btn btn-primary btndj">Crear Autor</button>
+        </form>
+    </div>
+{% endblock %}

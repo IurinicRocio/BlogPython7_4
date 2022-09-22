@@ -5,7 +5,7 @@ from django.db import models
 class Autor(models.Model):
     nombre = models.CharField(max_length=20)
     apellido = models.CharField(max_length=20)
-    fotoPerfil = models.ImageField()
-    sombreMi = models.TextField()
+    fotoPerfil = models.ImageField(upload_to='image/porfil/')
+    sobreMi = models.TextField()
 
 
