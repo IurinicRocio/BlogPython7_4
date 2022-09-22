@@ -3,6 +3,12 @@
     top: 60px
 }
 
+.BotonNuevaPublicacion{
+    position: relative;
+    left: 5px;
+    top: 60px
+}
+
 #con{
     background-color: rgb(19, 8, 71);
     display: flex;
