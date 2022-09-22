@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'css/miestilo.css' %}" > -->
+{% block contenido %}
+
+    <p>Publicaciones</p>
+
+    {% if publicaciones %}
+
+        {% for publicacion in publicaciones %}
+        <li>
+            <p>Titulo {{publicacion.titulo}}</p>
+            <p>Subtitulo {{publicacion.subtitulo}}</p>
+            <p>Autor {{publicacion.autor.nombre}} {{publicacion.autor.apellido}} </p>
+        </li>
+        {% endfor %}      
+
+    {% else %}
+        <p> Aún no hay publicaciones con esta temática :( </p>
+    {% endif %}
+        
+{% endblock %}

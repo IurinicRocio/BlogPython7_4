@@ -6,8 +6,9 @@ from Blog.forms import form_nuevaPublicacion, form_nuevaTematica
 # Create your views here.
 
 def publicaciones(request): 
-    
-    return render(request, 'publicaciones.html')
+
+    tematicas = Tematica.objects.all()
+    return render(request, 'publicaciones.html', {'tematicas' : tematicas} )
 
 def create_publicacion(request):
 
@@ -44,3 +45,9 @@ def create_tematica(request):
         formulario = form_nuevaTematica()
     return render(request, 'CRUDpublicacion/create_publicacion.html',{'formulario': formulario})
     
+def buscar_publicacion(request,tematica_nombre):
+    tematica=Tematica.objects.get(nombre=tematica_nombre)
+    publicaciones = Post.objects.filter(tematica_id = tematica.id)
+    print(publicaciones)
+    return render(request, 'CRUDpublicacion/buscar_publicacion.html',{'publicaciones' : publicaciones})
+
